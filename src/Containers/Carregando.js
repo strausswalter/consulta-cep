@@ -1,13 +1,18 @@
 
+function Carregando (props) {
+  const goTo = props.goTo;
+  const ticket = props.ticket;
+  function handleCancel(){
+      ticket.current++;
+    goTo("PESQUISA");
 
-function Carregando () {
+  }
+
     return (
-      <div className="App">
-        <header className="App-header">
+      <>
         <p>Carregando resultados...</p>
-          <button>Cancelar</button>
-        </header>
-      </div>
+          <button onClick={handleCancel} >Cancelar</button>
+      </>
     );
   }
 
